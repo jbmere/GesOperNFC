@@ -1,0 +1,7 @@
+{
+  "name": "GescrApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
