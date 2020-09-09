@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <title>GescrApp</title>
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <script type="module" src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.esm.js"></script>
+  <script nomodule src="https://unpkg.com/@ionic/pwa-elements@latest/dist/ionicpwaelements/ionicpwaelements.js"></script>
+
+  <!--<link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">-->
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  
+  <div class="startPage" id="pantallaInicial">
+    <img class="centrada" style="z-index: 1001" src="css/images/GESCRAP.jpg">
+  </div>
+  
+  <header class="bar-header">
+    <h1 class="title"> Formulario </h1>
+  </header>
+  <div class="content">
+    <div class="table-view nfcPart">
+      <form>
+        El NFC está: <span class="cambio" style="color: red"> desactivado</span>
+        <label class="switch pull-right">
+          <input type="checkbox" id="nfc" />
+          <span class="slider round"></span>
+        </label>
+      </form>
+      <button class="button" id="buscarNFC">Guardar tag NFC</button>
+    </div>
+    <div class="table-view">
+      <div class="aligned"> 
+      Vehículo: 
+      <figure class="caja">
+        <select id="tipoCoche">	 
+        </select>
+      </figure>
+      </div> 
+      <a href='#' onclick=app.descargar()>
+        <span id="alertaDescarga" style="color: gray; margin-top: 15px;">Se están cargando...</span>
+      </a>
+    </div>
+    <div class="table-view">
+      <form class="aligned">
+        Báscula: 	
+        <figure class="caja">
+          <select id="tipoBascula">
+            <option value="Báscula Entrada Gescrap">Báscula Entrada Gescrap</option>
+            <option value="Báscula Salida Gescrap">Báscula Salida Gescrap</option>
+            <option value="Báscula Entrada Cliente">Báscula Entrada Cliente</option>
+            <option value="Báscula Salida Cliente">Báscula Salida Cliente</option>
+            <option value="Punto de Recogida 1 Cliente"> Punto de Recogida 1 Cliente </option>
+            <option value="Punto de Recogida 2 Cliente"> Punto de Recogida 2 Cliente </option>
+            <option value="Punto de Recogida 3 Cliente"> Punto de Recogida 3 Cliente </option>
+          </select>
+        </figure>
+      </form>
+      <form class="quantity oculta aligned" style="margin-top: 15px">
+        <input id="pesoVehiculo" type="number" placeholder="Introduzca el peso: (en T)" />
+        <button class="button small" id="guardarPeso">Guardar</button>
+      </form>
+    </div>
+    <div class="table-view aligned">
+      Tipo de acción: 	
+      <figure class="caja">
+        <select id="tipoAccion">
+          <option value="Reemplazo Contenedor"> Reemplazo Contenedor </option>
+          <option value="Cargo con Pulpo"> Cargo con Pulpo  </option>
+          <option value="Vehiculo Cargado"> Vehiculo Cargado </option>
+        </select>
+      </figure>
+    </div>
+    <div class="table-view">
+      <div class="box-horizontal"> 
+        <img class="inside" src="css/icons/camera-icon.png"/>
+        <button class="button" style="margin-left: 15px" id="botonCamara">Tomar una foto (opcional)</button>
+      </div>
+      <img style="display:none; margin-top:10px; max-width: 100%; height: auto;  border: 3px solid #ddd;border-radius: 4px;" src="" id="imgCamara"/>
+      <button style="display: none" class="button" id="buttCancel">	
+        <span style="color: red">Borrar foto  X</span>
+      </button>
+    </div>	
+    <div class="table-view">
+      <div class="box-horizontal">
+        <img class="inside" src="css/icons/location-icon.png"/>
+        <button class="button" style="margin-left: 13px" id="localizacion">Comprobar ubicación</button>
+      </div>
+    </div>
+    <div class="table-view">
+      <button class="button" id="enviarTodo">Guardar todo</button>
+    </div>
+  <!--
+    <div class="table-view">
+      <button class="button" id="leer">Leer texto</button>
+    </div>	
+    <div class="table-view">
+      <button class="button" id="eliminar">Eliminar texto</button>
+    </div>
+    -->						
+  </div>
+  
+  <div class="backgroundNotification ocultar">
+  </div>
+  <div class="blockNotification ocultar" id="guardVeh">
+    Introduzca el nuevo vehículo que quiere incluir:
+    <textarea class="textarea" id ="muchoTexto"></textarea>
+    <figure class="selector">			
+      <button class="button multiple left"  id="aceptar">Aceptar</button>
+      <button class="button multiple right" id="cancelar">Cancelar</button>
+    </figure>
+  </div>	
+  <div class="blockNotification ocultar" style="z-index: 99" id="confirmarVehiculo">		¿Desea guardar este vehículo?
+    <span id="cocheElegido" style="color:blue">Nuevo coche</span>
+    <figure class="selector">
+      <button class="button multiple left" id="aceptarSeguro">Aceptar</button>
+      <button class="button multiple right" id="cancelarSeguro">Cancelar</button>
+    </figure>
+  </div>
+
+
+
+  <script src="capacitor.js"></script>
+  <script src="lib/jquery.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
+
