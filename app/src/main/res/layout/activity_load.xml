@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoadActivity">
+
+    <Button
+        android:id="@+id/button_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="25dp"
+        android:layout_centerInParent="true"
+        android:paddingVertical="10dp"
+
+        android:background="@color/colorAccent"
+        android:drawableEnd="@android:drawable/stat_notify_sync"
+        android:drawablePadding="10dp"
+        android:onClick="onClick"
+        android:paddingStart="20dp"
+        android:paddingEnd="10dp"
+        android:text="@string/refresh_list_button"
+        android:textColor="@color/colorSplash"
+
+        android:focusableInTouchMode="true"/>
+
+    <EditText
+        android:id="@+id/edit_text_search_filter"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/button_refresh"
+        android:padding="20dp"
+        android:hint="@string/search_hint_load"
+        android:autofillHints="@string/search_hint_load"
+        android:textColor="@color/shadowGrey"
+        android:cursorVisible="false"
+        android:inputType="text"/>
+
+    <ListView
+        android:id="@+id/lv_plate_numbers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_text_search_filter"
+        android:layout_above="@id/button_select_plate_number"
+        android:layout_centerHorizontal="true"
+
+        android:scrollbars="vertical"
+        android:layout_marginHorizontal="10dp"
+        android:layout_margin="10dp"
+        android:textAlignment="center"
+        android:divider="@color/colorAccent"
+        android:dividerHeight="2dp"
+        android:listSelector="@color/colorAccent"
+        />
+
+    <!--TextView
+        android:id="@+id/tv_downloaded_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Download_textView"
+
+        android:layout_above="@id/button_select_plate_number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+            /-->
+    <Button
+        android:id="@+id/button_select_plate_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="20dp"
+        android:paddingVertical="25dp"
+
+        android:background="@android:drawable/btn_default"
+        android:drawableEnd="@android:drawable/ic_menu_send"
+        android:onClick="onClick"
+        android:paddingStart="30dp"
+        android:paddingEnd="15dp"
+        android:text="@string/select_button_reg"
+        android:textColor="@color/colorPrimaryDark" />
+
+</RelativeLayout>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".activities.MainActivity">
+
+    <Button
+        android:id="@+id/button_reg"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/buttons_style_border_blue"
+        android:onClick="onClick"
+        android:text="@string/registration"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccentLight"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.222"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="1" />
+
+    <!--<Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.075"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_reg" />
+-->
+
+    <Button
+        android:id="@+id/button_NFC"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/buttons_style_border_orange"
+        android:drawableBottom="@drawable/ic_nfc"
+        android:drawablePadding="-20dp"
+        android:onClick="onClick"
+        android:paddingBottom="20dp"
+        android:text="@string/NFC"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.25"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_reg"
+        app:layout_constraintWidth_percent="1" />
+
+    <Button
+        android:id="@+id/button_weight"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/buttons_style_border_orange_right"
+        android:drawableBottom="@drawable/ic_weight_kg"
+        android:drawablePadding="-80dp"
+        android:onClick="onClick"
+        android:paddingBottom="80dp"
+        android:text="@string/weight"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/button_upload"
+        app:layout_constraintEnd_toStartOf="@+id/button_pic"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_NFC"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/button_time"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/buttons_style_border_orange_right"
+        android:drawableBottom="@android:drawable/ic_menu_recent_history"
+        android:drawablePadding="-80dp"
+        android:onClick="onClick"
+        android:paddingBottom="80dp"
+        android:text="@string/time"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/button_upload"
+        app:layout_constraintEnd_toStartOf="@+id/button_pic"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_NFC"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/button_pic"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/buttons_style_border_orange_sides"
+        android:drawableBottom="@drawable/ic_photo"
+        android:drawablePadding="-80dp"
+        android:onClick="onClick"
+        android:paddingBottom="80dp"
+        android:text="@string/picture"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toTopOf="@+id/button_upload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.45"
+        app:layout_constraintTop_toBottomOf="@+id/button_NFC"
+        app:layout_constraintWidth_percent="0.5" />
+
+    <Button
+        android:id="@+id/button_upload"
+        style="@style/TextAppearance.AppCompat.Large"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:drawable/btn_default"
+        android:onClick="onClick"
+        android:text="@string/upload"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvInitialMsg"
+        style="@android:style/TextAppearance.DeviceDefault.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_nfc_msg"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_NFC"
+        app:layout_constraintVertical_bias="0.5" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

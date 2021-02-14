@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+    <TableLayout
+        android:id="@+id/gridButtons"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:stretchColumns="0,1">
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/button_reg"
+                android:layout_height="match_parent"
+                android:backgroundTint="@android:color/holo_blue_bright"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/registration"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/button_weight"
+                android:layout_height="match_parent"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:textColor="@color/colorPrimaryDark"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:text="@string/weight"
+                android:onClick="onClick"/>
+        </TableRow>
+
+        <TableRow
+            android:layout_height="match_parent"
+            android:layout_weight="0.5">
+
+            <Button
+                android:id="@+id/button_NFC"
+                android:layout_height="match_parent"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:textColor="@color/colorPrimaryDark"
+                android:backgroundTint="@android:color/holo_orange_light"
+                android:text="@string/NFC"
+                android:onClick="onClick"/>
+
+            <Button
+                android:id="@+id/button_pic"
+                android:layout_height="match_parent"
+                style="@style/TextAppearance.AppCompat.Widget.Button.Borderless.Colored"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/picture"
+                android:adjustViewBounds="true"
+                android:onClick="onClick"
+                android:contentDescription="@string/picture" />
+        </TableRow>
+        <Button
+            android:id="@+id/button_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/upload"
+            android:onClick="onClick"/>
+    </TableLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

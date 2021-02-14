@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">GescrApp</string>
+    <string name="registration">Cambiar vehículo\n\n</string>
+    <string name="weight">Introducir peso</string>
+    <string name="edit_weight">Editar peso\n\nPeso actual:&#160;</string>
+    <string name="NFC">Leer NFC</string>
+    <string name="edit_NFC">Editar lectura de NFC\n\n</string>
+    <string name="picture">Tomar Foto (opcional)</string>
+    <string name="edit_picture">Rehacer foto</string>
+    <string name="upload">Subir datos</string>
+    <string name="time">Duración del evento</string>
+    <string name="edit_time">Editar duración\n\nValor actual (en minutos):\n </string>
+    <string name="error_main_buttons">Seleccione una opción correcta</string>
+    <string name="select_right_option">Seleccione una opción correcta</string>
+    <string name="select_nfc_msg">Para leer un NFC seleccione el botón correspondiente</string>
+    <string name="selected_option">Tipo de salida seleccionado</string>
+    <string name="dialog_confirm_msg">¿Está seguro?</string>
+
+    <string name="activate_gps_title">GPS desactivado</string>
+    <string name="activate_gps_msg">Para poder usar esta característica es necesario activar el GPS del terminal.\n\nActívelo desde la barra de notificaciones o desde ajustes -> Activar ubicación.\nUna vez activado presione \"GPS Activado\"</string>
+    <string name="gps_activated">GPS activado</string>
+    <string name="go_to_settings">Ir a ajustes</string>
+
+    <string name="activate_internet_title">Internet desactivado</string>
+    <string name="activate_internet_msg">Para poder usar esta característica es necesario activar la conexión a internet del terminal.\n\nConéctese a una red para el envío de datos e inténtelo de nuevo"</string>
+    <string name="internet_activated">Internet activado</string>
+
+    <string name="refresh_list_button">Descargar lista de matrículas</string>
+    <string name="select_button_reg">Seleccionar matrícula</string>
+    <string name="search_hint_load"> &#128269; Introduzca inicio de matrícula: </string>
+    <string name="regs_retrieved">Matrículas actualizadas</string>
+
+    <string name="enter_weight_explanation">Introduzca el peso del camión en Kg</string>
+    <string name="error_input">Introduzca un valor válido</string>
+    <string name="enter_time_explanation">Introduzca la duración del evento</string>
+    <string name="hours">Horas: </string>
+    <string name="min">Minutos: </string>
+    <string name="ok">Aceptar</string>
+    <string name="dismiss">Cancelar</string>
+
+    <string name="nfc_needed">Para usar esta funcionalidad es necesario que el dispositivo disponga de lector NFC y que este esté activado.\n\nPara cualquier duda póngase en contacto con su responsable</string>
+    <string name="nfc_not_supported">Su dispositivo no dispone de lector NFC </string>
+    <string name="nfc_explanation">Acerque el dispositivo a la etiqueta NFC que quiera leer</string>
+
+    <string name="send_button_toast_msg">Rellene los campos obligatorios que falten</string>
+
+    <string-array name="hours_array">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+
+    <string-array name="min_array">
+        <item>0</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>35</item>
+        <item>40</item>
+        <item>45</item>
+        <item>50</item>
+        <item>55</item>
+    </string-array>
+</resources>

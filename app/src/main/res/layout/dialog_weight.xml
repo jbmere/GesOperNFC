@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:text="@string/enter_weight_explanation"/>
+
+        <EditText
+            android:id="@+id/edit_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:layout_gravity="center"
+            android:textColor="@color/colorPrimaryDark"
+            android:autofillHints="@string/weight"
+            android:hint="@string/weight"
+            android:inputType="number"/>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1">
+            <TableRow>
+                <Button
+                    android:id="@+id/button_dialog_dismiss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.AppCompat.Widget.Button"
+                    android:background="@color/colorPrimaryDark"
+                    android:textColor="@color/colorAccentLight"
+                    android:text="@string/dismiss"/>
+                <Button
+                    android:id="@+id/button_dialog_ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.AppCompat.Button"
+                    android:background="@color/shadowGrey"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:text="@string/ok"/>
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+</ScrollView>
