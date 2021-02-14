@@ -14,5 +14,7 @@ according to the interesting Android releases.
 
 =====
 
+DOI: 10.5281/zenodo.4540705
+
 Madrid 10/10/2020
 
